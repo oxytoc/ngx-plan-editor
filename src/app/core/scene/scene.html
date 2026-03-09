@@ -1,0 +1,14 @@
+<div class="scene-container">
+  <div #scene>
+    <img [src]="bgImageUrl" class="background-image" />
+    @for (element of elements; track $index) {
+      <app-element-wrapper
+        [componentType]="getComponentType(element)"
+        [elementData]="element"
+        [x]="element.x"
+        [y]="element.y"
+      >
+      </app-element-wrapper>
+    }
+  </div>
+</div>
