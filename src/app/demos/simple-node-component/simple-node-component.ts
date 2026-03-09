@@ -10,13 +10,11 @@ import { ElementComponentBase } from '../../core/element-wrapper/element-base';
 })
 export class SimpleNodeComponent extends ElementComponentBase {
   onClick(event: MouseEvent): void {
-    // ECCM: клик ЛКМ для выделения (с Ctrl — множественное)
     this.elementClick.emit(event);
   }
 
   onContextMenu(event: MouseEvent): void {
     event.preventDefault();
-    // ECCM: контекстное меню по ПКМ
     this.elementContextMenu.emit(event);
   }
 }
