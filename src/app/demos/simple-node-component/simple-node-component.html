@@ -1,0 +1,9 @@
+<div
+  class="node"
+  (click)="onClick($event)"
+  (contextmenu)="onContextMenu($event)"
+  [attr.data-node-id]="element.id"
+>
+  <div class="icon">{{ element.data['icon'] || '🔌' }}</div>
+  <div class="label">{{ element.data['label'] }}</div>
+</div>
